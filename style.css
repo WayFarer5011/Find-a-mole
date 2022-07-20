@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --line-color: hsla(360, 81%, 35%, 1);
+    --yellow-bg: hsla(41, 80%, 60%);
+    --black-color: hsla(0, 0%, 9%, 1);
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    /*background-color: hsla(225, 39%, 24%, 1);*/
+    background-color: var(--yellow-bg);
+    color: var(--black-color);
+    transition: 1s;
+  }
+  
+  h1, h2, h3 {
+   /* color: var(--title-color);
+    font-weight: var(--font-bold);
+    */  
+  }
+  
+  h1, h2, h3, p {
+    line-height: 140%;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  .container {
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+.btn {
+  padding: .5rem;
+  font-size: 1.5rem;
+  border: 1px solid var(--black-color);
+  border-radius: .7rem;
+  background-color: #fff;
+  transition: linear .2s background-color;
+}  
+
+.btn:hover {
+  background-color: var(--black-color);
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 8rem;
+}  
+
+.counter {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.time {
+  margin-right: 1rem;
+  font-size: 3rem;
+}
+
+.game__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.game__img {
+  width: 125px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal__container {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 600px;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.highscore {
+  display: flex;
+  align-items: center;
+}
+
+.modal__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.again {
+  margin-bottom: 1rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
